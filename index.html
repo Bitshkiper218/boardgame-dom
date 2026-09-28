@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог настільних ігор</title>
+    
+    <!-- Правильне підключення вашого скрипта з папки js -->
+    <script src="js/script.js" defer></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка з навігацією -->
+    <header>
+        <h1>Каталог настільних ігор</h1>
+        <nav>
+            <a href="#filters">Фільтри</a>
+            <a href="#games">Список ігор</a>
+        </nav>
+    </header>
+
+  <!-- Основний вміст -->
+    <main>
+        <!-- Блок фільтрів -->
+        <section id="filters">
+            <h2>Фільтри</h2>
+            <form action="#" method="GET">
+                <label for="player-count">Кількість гравців:</label>
+                <input type="number" id="player-count" name="players" min="1" max="10">
+                <button type="submit" class="btn-filter">Застосувати</button>
+            </form>
+        </section>
+ 
+        <!-- Список карток ігор -->
+        <section id="games">
+            <h2>Ігри</h2>
+            
+            <!-- ДОДАНО ДЛЯ 7 ЛАБИ: Лічильник ігор -->
+            <p style="font-weight: 600; color: #7b2cbf;">Усього ігор у каталозі: <span id="games-count">0</span></p>
+            
+            <!-- ДОДАНО ДЛЯ 7 ЛАБИ: id="games-list" для контейнера -->
+            <div class="cards" id="games-list"> 
+                <!-- Залишаємо лише одну картку як статичну заглушку. 
+                     Скрипт її самостійно знайде і видалить -->
+                <article class="static-placeholder">
+                    <h3>Статична заглушка</h3>
+                    <span class="badge">👥 0 гравців</span>
+                    <p>Ця картка має зникнути, коли спрацює JavaScript.</p>
+                </article>
+            </div> 
+            
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer>
+        <p>Виконав: Ілля Гончар, 2026. Навчальний проєкт.</p>
+    </footer>
+
+</body>
+</html>
